@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <img src="./img/Logo.png" alt="Logo" class="logo">
+       </header>
+       <main class="flex">
+            <section>
+                <textarea class="text-area" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="flex informacion">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm0 9h-1l-.117 .007a1 1 0 0 0 0 1.986l.117 .007v3l.007 .117a1 1 0 0 0 .876 .876l.117 .007h1l.117 -.007a1 1 0 0 0 .876 -.876l.007 -.117l-.007 -.117a1 1 0 0 0 -.764 -.857l-.112 -.02l-.117 -.006v-3l-.007 -.117a1 1 0 0 0 -.876 -.876l-.117 -.007zm.01 -3l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z" stroke-width="0" fill="currentColor" />
+                    </svg>
+                    <h6> Solo letras minusculas y sin acento</h6>
+                </div>
+                <div class="botones flex">
+                    <button class="boton__encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="boton__desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <section>
+                <div class="contenedor__resultado flex">
+                    <textarea class="resultado"  ></textarea>
+                    
+                    <h3 class="mensaje ocultar"> Ningun mensaje fue encontrado</h3>
+                    <p class="mensaje ocultar">Ingresa el texto que deseas encriptar o desencriptar</p>                    
+                    <button class="copiar btn-copiar" style="display: none;" onclick="copiarTexto()">Copiar</button>
+                </div>
+            </section>
+       </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+:root{
+    --primario:#F3F5FC;
+    --secundario: #D8DFE8;
+    --azul: #0A3871;
+    --azulletras: #0A3871;
+    --blanco: #FFF;
+    --gris: grey;
+    --negro: #000;
+
+    --fuentePrincipal: 'Inter';
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+  *, *:before, *:after {
+    background: var(--primario);
+    font-family: var(--fuentePrincipal);
+    box-sizing: inherit;
+}
+
+/*Globales*/
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: var(--azulLetras);
+    font-family: var(--fuentePrincipal);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+/* Primer section */
+.logo{
+    padding-top: 1rem;
+    margin-left: 1rem;
+    width: 10%;
+}
+
+.flex{
+    display: flex;
+}
+
+.text-area{
+    border: none;
+    color: var(--azulletras);
+    font-size: 2.5rem;
+    width: 80rem;
+    height: 100%;
+    margin: 5rem;
+    padding-left: 7rem;
+    resize: none;
+}
+
+.text-area::placeholder{color: var(--azulletras);}
+    .text-area:focus{
+        outline: none;
+    }
+
+.informacion{
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5rem;
+    padding-left: 7rem;
+    color: grey;
+    font-size: 1.5rem;
+}
+
+.botones{
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.boton__desencriptar{
+    background-color: var(--secundario);
+    border: 1px solid var(--azul);
+    border-radius: 2.5rem;
+    color: var(--azulletras);
+    cursor: pointer;
+    margin-left: 6rem;
+    height: 6.4rem;
+    width: 32rem;
+}
+
+.boton__encriptar{
+    background-color: var(--azul);
+    border: 1px solid var(--azul);
+    border-radius: 2.5rem;
+    color: var(--blanco);
+    cursor: pointer;
+    height: 6.4rem;
+    width: 32rem;
+}
+
+/* Segunda seccion */
+.contenedor__resultado{
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 17px -12px rgba(0,0,0,0.54);
+    -moz-box-shadow: 5px 5px 17px -12px rgba(0,0,0,0.54);
+    box-shadow: 5px 5px 17px -12px rgba(0,0,0,0.54);
+    padding: 3rem;
+    border-radius: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    height: 60rem;
+    position: fixed;
+}
+
+.resultado{
+    background-color: var(--blanco);
+    background-image: url("../img/Muneco.png");
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 2.5rem;
+    color: var(--azulletras);
+    width: 30rem;
+    height: 30rem;
+    padding: 2rem;
+    resize: none;
+}
+
+.resultado:focus{
+    outline: none;
+}
+
+.mensaje{
+    background: none;
+    text-align: center;
+    margin-bottom: 0;
+    color: #343A40;
+}
+
+
+
+.copiar{
+    border: 1px solid var(--azul);
+    border-radius: 2.5rem;
+    color: var(--azulletras);
+    cursor: pointer;
+    height: 6.4rem;
+    width: 32rem;
+    
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+    .contenedor {
+        max-width: 100%;
+        padding: 0 2rem;   
+    }
+
+    .flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-area {
+        width: 100%;
+        margin: 2rem 0;
+        padding-left: 2rem;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton__desencriptar, .boton__encriptar {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+
+    .contenedor__resultado {
+        width: 100%;
+        height: 100%;
+        margin: 2rem 0;
+        position: static;
+    }
+
+    .resultado {
+        background-image: none;
+    }
+
+    .logo{
+        width: 10rem;
+    }
+
+    .informacion{
+        flex-direction: row;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 480px) {
+    .contenedor {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .text-area {
+        width: 100%;
+        margin: 1rem 0;
+        padding-left: 1rem;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton__desencriptar, .boton__encriptar, .copiar {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .contenedor__resultado {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+        position: static;
+    }
+
+    .resultado {
+       background-image: none;
+    }
+}
